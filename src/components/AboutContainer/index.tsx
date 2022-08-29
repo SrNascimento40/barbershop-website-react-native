@@ -1,12 +1,22 @@
 import React from 'react'
-import { Button, Text, View } from 'react-native'
+import { StyleSheet, useWindowDimensions, Text, View } from 'react-native'
 
-export default function Footer() {
-  
 
+export default function AboutContainer() {
   return (
-    <View style={{ flex:1, justifyContent: "center", alignItems: "center"}}>
-      <Text>footer!</Text>
+    <View style={styles.footer}>
+      <Text style={{color: 'blue'}}>test</Text>
+      <Text>texto com um monte de abobrinha que depois eu vou susbtituir, mas por enquanto ele fica aí me dando noção de espaço</Text>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  footer: {
+    display: 'flex',
+    height: '10vh',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
+})

@@ -1,12 +1,26 @@
 import React from 'react'
-import { Button, Text, View } from 'react-native'
+import { Button, StyleSheet, Alert, Text, View } from 'react-native'
 
-export default function Footer() {
-  
+
+export default function Scheduler() {
+  const funcaoRand = () => {
+    return console.log('ayrton senna');
+  }
 
   return (
-    <View style={{ flex:1, justifyContent: "center", alignItems: "center"}}>
-      <Text>footer!</Text>
+    <View style={styles.footer}>
+      <Text style={{color: 'blue'}}>aqui você vai agendar um horário</Text>
+      <Button title='agendar' onPress={() => Alert.alert('Simple Button pressed')} />
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  footer: {
+    display: 'flex',
+    height: '10vh',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
+})

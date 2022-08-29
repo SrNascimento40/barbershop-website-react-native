@@ -10,9 +10,9 @@ const paddingResponsive = (width: number) => {
 
 export default function Header() {
   return (
-    <footer style={styles.footer}>
-      <p>test</p>
-    </footer>
+    <View style={styles.footer}>
+      <Text style={{color: 'blue'}}>test</Text>
+    </View>
   )
 }
 
@@ -24,6 +24,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'black',
     alignItems: 'center',
-    color: 'white'
   }
 })
