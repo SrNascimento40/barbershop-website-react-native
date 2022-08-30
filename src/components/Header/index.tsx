@@ -1,19 +1,21 @@
 import React from 'react'
-import { StyleSheet, useWindowDimensions, Text, View } from 'react-native'
+import { StyleSheet, useWindowDimensions, Image, Text, View } from 'react-native'
+import menu from '../../../assets/icons/menu.png'
+
 
 const paddingResponsive = (width: number) => {
-    if (width < 360) return '0'
+    if (width < 410) return '0'
     else if (width < 480) return '25%'
     else if (width < 680) return '30%'
     else if (width > 680) return '40%'
 }
 function RenderMenu(width: number) {
     console.log(width);
-    if (width < 360) {
-        return(<p>oi</p>)
+    if (width < 415) {
+        return (<Image style={styles.logoMenu} source={menu} />)
     }
     else {
-        return(<ul style={{ ...styles.list, paddingLeft: paddingResponsive(width) }}>
+        return (<ul style={{ ...styles.list, paddingLeft: paddingResponsive(width) }}>
             <li style={styles.options}>balabl</li>
             <li style={styles.options}>bababl</li>
             <li>balbalbal</li>
@@ -38,13 +40,11 @@ export default function Header() {
     )
 }
 
-
 const styles = StyleSheet.create({
     header: {
         display: 'flex',
         height: 32,
         width: '100%',
-        backgroundColor: 'blue'
     },
     menu: {
         flex: 2,
@@ -52,13 +52,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: '10vh',
         width: '100%',
-        backgroundColor: 'blue',
+        backgroundColor: 'gray',
         justifyContent: 'space-between',
         alignItems: 'center',
+        paddingHorizontal: 5,
     },
     logo: {
         padding: 12,
-        paddingLeft: 16,
     },
     list: {
         flex: 1,
@@ -68,5 +68,10 @@ const styles = StyleSheet.create({
     },
     options: {
         paddingRight: 22,
+    },
+    logoMenu: {
+        width: 20,
+        height: 20,
+        paddingRight: 10
     }
 })

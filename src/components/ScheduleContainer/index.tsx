@@ -4,13 +4,13 @@ import { Button, StyleSheet, Alert, Text, View } from 'react-native'
 
 export default function Scheduler() {
   const funcaoRand = () => {
-    return console.log('ayrton senna');
+    console.log('ayrton senna');
   }
 
   return (
     <View style={styles.footer}>
       <Text style={{color: 'blue'}}>aqui você vai agendar um horário</Text>
-      <Button title='agendar' onPress={() => Alert.alert('Simple Button pressed')} />
+      <Button title='agendar' onPress={() => funcaoRand()} />
     </View>
   )
 }
