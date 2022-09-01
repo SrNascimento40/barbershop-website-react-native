@@ -26,12 +26,14 @@ const styles = StyleSheet.create({
     paddingTop: 40,
     padding: 20,
     fontWeight: "600",
-    fontSize: 36
+    fontSize: 36,
+    color: "#0a0a0a"
   },
   text: {
     textAlign: 'center',
     width: '85%',
     padding: 20,
-    fontSize: 16
+    fontSize: 16,
+    color: "#0a0a0a"
   }
 })

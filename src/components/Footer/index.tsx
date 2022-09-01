@@ -8,10 +8,15 @@ const paddingResponsive = (width: number) => {
   else if (width > 680) return '40%'
 }
 
-export default function Header() {
+export default function Footer() {
   return (
     <View style={styles.footer}>
-      <Text style={{color: 'blue'}}>test</Text>
+      <Text style={styles.logo}>test</Text>
+      <Text style={styles.logo} >Segunda a Sexta - 09h às 20h Sábados - 08h às 18h</Text>
+      <View>
+        <Text style={styles.logo} >Rua Professor Moraes, 476</Text>
+        <Text style={styles.logo} >Tel: 31 3055 3007</Text>
+      </View>
     </View>
   )
 }
@@ -19,10 +24,14 @@ export default function Header() {
 const styles = StyleSheet.create({
   footer: {
     display: 'flex',
-    height: '10vh',
+    flexDirection: 'row',
+    height: '25vh',
     width: '100%',
-    justifyContent: 'center',
-    backgroundColor: 'black',
+    justifyContent: 'space-around',
     alignItems: 'center',
+    backgroundColor: "#000000d6"
+  },
+  logo: {
+    color:  "#e8e8e8",
   }
 })
