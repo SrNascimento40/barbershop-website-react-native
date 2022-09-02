@@ -18,7 +18,7 @@ function RenderMenu(width: number) {
         return (<ul style={{ ...styles.list, paddingLeft: paddingResponsive(width) }}>
             <li style={styles.options}>balabl</li>
             <li style={styles.options}>bababl</li>
-            <li>balbalbal</li>
+            <li style={styles.options}>balbalbal</li>
         </ul>)
     }
 }
@@ -52,13 +52,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: '15vh',
         width: '100%',
-        backgroundColor: "#272727",
+        backgroundColor:  "#e8e8e8",
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 5,
     },
     logo: {
         padding: 12,
+        color: "#272727",
     },
     list: {
         flex: 1,
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
     },
     options: {
         paddingRight: 22,
+        color: "#272727",
     },
     logoMenu: {
         width: 20,

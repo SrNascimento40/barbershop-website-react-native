@@ -1,20 +1,26 @@
 import React from 'react'
-import { StyleSheet, useWindowDimensions, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
+import instaPhoto3 from '../../../assets/images/instaPhoto.jpg'
+import instaPhoto1 from '../../../assets/images/instaPhoto2.jpg'
+import instaPhoto2 from '../../../assets/images/instaPhoto1.jpg'
 
 
-export default function AboutContainer() {
+
+export default function instaContainer() {
   return (
-    <View style={styles.AboutContainer}>
+    <View style={styles.instaContainer}>
       <Text style={styles.title}>Instagram</Text>
-      <Text style={styles.text}>
-        texto com um monte de abobrinha que depois eu vou substituir, mas por enquanto ele fica aí me dando noção de espaço.
-      </Text>
+      <View style={styles.photos}>
+        <Image source={instaPhoto1} style={styles.instaPhoto}/>
+        <Image source={instaPhoto2} style={styles.instaPhoto}/>
+        <Image source={instaPhoto3} style={styles.instaPhoto}/>
+      </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  AboutContainer: {
+  instaContainer: {
     display: 'flex',
     width: '100%',
     alignItems: 'center',
@@ -28,11 +34,16 @@ const styles = StyleSheet.create({
     fontSize: 36,
     color: "#0a0a0a"
   },
-  text: {
-    textAlign: 'center',
-    width: '85%',
-    padding: 20,
-    fontSize: 16,
-    color: "#0a0a0a"
+  instaPhoto: {
+    width: 300,
+    height: 300,
+    resizeMode: 'contain',
+    margin: 7,
+  },
+  photos: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around'
   }
 })
