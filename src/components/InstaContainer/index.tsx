@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import instaPhoto3 from '../../../assets/images/instaPhoto.jpg'
 import instaPhoto1 from '../../../assets/images/instaPhoto2.jpg'
 import instaPhoto2 from '../../../assets/images/instaPhoto1.jpg'
+import instaPhoto from '../../../assets/images/instaPhoto3.jpg'
 
 
 
@@ -11,9 +12,22 @@ export default function instaContainer() {
     <View style={styles.instaContainer}>
       <Text style={styles.title}>Instagram</Text>
       <View style={styles.photos}>
-        <Image source={instaPhoto1} style={styles.instaPhoto}/>
-        <Image source={instaPhoto2} style={styles.instaPhoto}/>
-        <Image source={instaPhoto3} style={styles.instaPhoto}/>
+        <View style={styles.photos}>
+          <a href='https://www.instagram.com/p/ChkIqG6O0GQ/' target="_blank">
+            <Image source={instaPhoto1} style={styles.instaPhoto} />
+          </a>
+          <a href='https://www.instagram.com/p/ChK2E4XpUU4/' target="_blank">
+            <Image source={instaPhoto2} style={styles.instaPhoto} />
+          </a>
+        </View>
+        <View style={styles.photos}>
+          <a href='https://www.instagram.com/p/ChXlYK6O5X0/' target="_blank">
+            <Image source={instaPhoto3} style={styles.instaPhoto} />
+          </a>
+          <a href='https://www.instagram.com/p/Cd55Fm1L-z7/' target="_blank">
+            <Image source={instaPhoto} style={styles.instaPhoto} />
+          </a>
+        </View>
       </View>
     </View>
   )
@@ -35,10 +49,9 @@ const styles = StyleSheet.create({
     color: "#0a0a0a"
   },
   instaPhoto: {
-    width: 300,
-    height: 300,
-    resizeMode: 'contain',
-    margin: 7,
+    width: 280,
+    height: 280,
+    margin: 5,
   },
   photos: {
     display: 'flex',

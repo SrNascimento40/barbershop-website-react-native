@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native'
+import background from '../../../assets/images/backgroundSchedule.jpg'
 
 
 export default function Scheduler() {
@@ -8,15 +9,20 @@ export default function Scheduler() {
   }
 
   return (
-    <View style={styles.SchedulerContainer}>
+    <ImageBackground
+      resizeMode='cover'
+      source={background}
+      blurRadius={5}
+      style={styles.SchedulerContainer}>
       <Text style={styles.title}>Agende um horário!</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => funcaoRand()}
-      >
-        <Text style={styles.textButton}>AGENDAR</Text>
-      </TouchableOpacity>
-    </View>
+      <a href='https://www.trinks.com/ferreirabarbearia' target="_blank">
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => funcaoRand()}>
+          <Text style={styles.textButton}>AGENDAR</Text>
+        </TouchableOpacity>
+      </a>
+    </ImageBackground>
   )
 }
 
@@ -25,15 +31,17 @@ const styles = StyleSheet.create({
     display: 'flex',
     width: '100%',
     alignItems: 'center',
+    justifyContent: 'center',
     paddingBottom: 40,
     backgroundColor: "#272727"
   },
   title: {
     paddingTop: 60,
     paddingBottom: 80,
+    textAlign: 'center',
     fontWeight: "600",
     fontSize: 36,
-    color: '#e8e8e8'
+    color: 'white'
   },
   button: {
     alignItems: 'center',
