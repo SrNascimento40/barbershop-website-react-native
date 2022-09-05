@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native'
 
 
 export default function Maps() {
-  const maps = "https://maps.googleapis.com/maps/api/staticmap?center=-15.838%2c%20-48.037&zoom=16&size=1000x1000&markers=icon:https://img.icons8.com/android/24/FA5252/marker.png|-15.8377%2c%20-48.0375&key="
+  const maps = "https://maps.googleapis.com/maps/api/staticmap?center=-15.838%2c%20-48.037&zoom=16&size=1000x1000&markers=icon:https://img.icons8.com/android/24/FA5252/marker.png|-15.8377%2c%20-48.0375&key=CHAVEPRIVADA"
 
   return (
     <View style={ styles.Container }>

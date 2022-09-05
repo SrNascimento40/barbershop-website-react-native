@@ -10,6 +10,7 @@ import instaPhoto from '../../../assets/images/instaPhoto3.jpg'
 export default function instaContainer() {
   return (
     <View style={styles.instaContainer}>
+      <div id='instagram' />
       <Text style={styles.title}>Instagram</Text>
       <View style={styles.photos}>
         <View style={styles.photos}>
