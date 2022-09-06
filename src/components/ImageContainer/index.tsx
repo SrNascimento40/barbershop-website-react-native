@@ -5,14 +5,14 @@ import Backgroundimage from '../../../assets/images/backgroundImage.jpg'
 
 export default function ImageContainer() {
   return (
-    <View style={styles.footer}>
+    <View style={styles.ImageContainer}>
       <Image source={Backgroundimage} style={styles.Backgroundimage}/>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  footer: {
+  ImageContainer: {
     display: 'flex',
     width: '100%',
     justifyContent: 'center',

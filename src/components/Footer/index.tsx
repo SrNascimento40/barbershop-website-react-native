@@ -6,16 +6,16 @@ import youtubeIcon from '../../../assets/icons/youtube-icon.png'
 import facebookIcon from '../../../assets/icons/facebook-icon.png'
 import whatsIcon from '../../../assets/icons/whats-icon.png'
 
-const paddingResponsive = (width: number) => {
-  if (width < 360) return '0'
-  else if (width < 480) return '25%'
-  else if (width < 680) return '30%'
-  else if (width > 680) return '40%'
+const footerResponsive = (width: number) => {
+  if (width < 485) return 'column'
+  else if (width > 485) return 'row'
 }
 
 export default function Footer() {
+  const { width } = useWindowDimensions()
+
   return (
-    <View style={styles.footer}>
+    <View style={{...styles.footer, flexDirection: footerResponsive(width)}}>
       <Image source={genericLogo} style={styles.logo} />
       <Text style={styles.text} >Segunda a Sexta - 09h às 20h Sábados - 08h às 18h</Text>
       <View style={styles.infoCol}>
@@ -36,11 +36,11 @@ const styles = StyleSheet.create({
   footer: {
     display: 'flex',
     flexDirection: 'row',
-    height: '25vh',
+    height: '35vh',
     width: '100%',
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: "#e8e8e8",
+    backgroundColor: "#ffbc00",
   },
   logo: {
     height: 125,

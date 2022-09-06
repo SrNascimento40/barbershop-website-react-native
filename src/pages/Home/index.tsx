@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Text, View } from 'react-native'
 import AboutContainer from '../../components/AboutContainer'
 import Footer from '../../components/Footer'
@@ -9,10 +9,14 @@ import Maps from '../../components/Maps'
 import Scheduler from '../../components/ScheduleContainer'
 
 export default function Home() {
-
+  const [menuOpen, setMenuOpen] = useState(true)
 
   return (
     <>
+      <NavbarMobile 
+      menuOpen={menuOpen}
+      setMenuOpen={setMenuOpen}
+      />
       <Header />
       <ImageContainer />
       <AboutContainer />

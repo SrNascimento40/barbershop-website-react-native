@@ -13,12 +13,11 @@ const paddingResponsive = (width: number) => {
 function RenderMenu(width: number) {
     const GoSchedule = () => {
         console.log('it works (:');
-
     }
 
     console.log(width);
     if (width < 415) {
-        return (<Image style={styles.logoMenu} source={menu} />)
+        return (<TouchableOpacity onPress={() => GoSchedule()}><Image style={styles.logoMenu} source={menu} /></TouchableOpacity>)
     }
     else {
         return (<ul style={{ ...styles.list, paddingLeft: paddingResponsive(width) }}>
@@ -32,7 +31,7 @@ function RenderMenu(width: number) {
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => GoSchedule()}>
-                    <Text style={styles.options}>Agendar</Text>
+                    <li style={styles.options}>Agendar</li>
                 </TouchableOpacity>
             </a>
         </ul>)
@@ -70,7 +69,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: '15vh',
         width: '100%',
-        backgroundColor: "#e8e8e8",
+        backgroundColor: "#ffbc00",
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 5,
@@ -93,7 +92,7 @@ const styles = StyleSheet.create({
         color: "#272727",
         alignItems: 'center',
         fontFamily: 'Roboto Condensed',
-        fontSize: '18px'
+        fontSize: 18
     },
     logoMenu: {
         width: 20,
@@ -103,8 +102,9 @@ const styles = StyleSheet.create({
     },
     button: {
         alignItems: 'center',
-        backgroundColor: '#e8e8e8',
+        backgroundColor: '#ffbc00',
         paddingVertical: 10,
         borderRadius: 7,
     }
 })
+// #e8e8e8

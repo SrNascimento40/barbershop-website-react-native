@@ -9,6 +9,7 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+private_key.ts
 
 # macOS
 .DS_Store
