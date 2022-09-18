@@ -10,27 +10,16 @@ export const Container = styled.div`
   right: 0;
   bottom: 0;
   z-index: 5;
-  display: flex;
   align-items: center;
   justify-content: center;
 
   background: rgba(17, 18, 17, 0.95);
   background: linear-gradient(35deg, rgba(39, 39, 39, 0.6) 0%, rgba(168, 124, 0, 0.5494572829131652) 50%, rgba(39, 39, 39, 0.5) 100%);
-  pointer-events: none;
-  transform: translateY(50px);
-
-  transition: .5s;
-
-  > Image {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    transform: rotate(45deg);
-    transition: .7s;
-  }
 
   nav {
     display: flex;
+    width: 100%;
+    height: 100vh;    
     align-items: center;
     justify-content: center;
     flex-direction: column;

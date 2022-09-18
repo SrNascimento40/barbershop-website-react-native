@@ -16,7 +16,9 @@ export default function Home() {
       menuOpen={menuOpen}
       setMenuOpen={setMenuOpen}
       />
-      <Header />
+      <Header 
+      menuOpen={menuOpen}
+      setMenuOpen={setMenuOpen}/>
       <ImageContainer />
       <AboutContainer />
       <Scheduler />

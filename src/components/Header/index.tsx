@@ -11,12 +11,12 @@ const paddingResponsive = (width: number) => {
     else if (width > 680) return '40%'
 }
 
-function RenderMenu(width: number) {
+function RenderMenu(width: number, { menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOpen: any }) {
     const GoSchedule = () => {
         console.log('it works (:');
     }
     if (width < 415) {
-        return (<TouchableOpacity onPress={() => GoSchedule()}><Image style={styles.logoMenu} source={menu} /></TouchableOpacity>)
+        return (<TouchableOpacity onPress={() => setMenuOpen(true)}><Image style={styles.logoMenu} source={menu} /></TouchableOpacity>)
     }
     else {
         return (<ul style={{ ...styles.list, paddingLeft: paddingResponsive(width) }}>
@@ -38,7 +38,7 @@ function RenderMenu(width: number) {
 }
 
 
-export default function Header() {
+export default function Header({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOpen: any }) {
     const { width } = useWindowDimensions()
     console.log(width);
 
@@ -49,7 +49,9 @@ export default function Header() {
                     <a href='#'>
                         <Image source={logo} style={styles.logo} />
                     </a>
-                    {RenderMenu(width)}
+                    {RenderMenu(width,
+                    {menuOpen,
+                    setMenuOpen})}
                 </>
             </View>
         </View>

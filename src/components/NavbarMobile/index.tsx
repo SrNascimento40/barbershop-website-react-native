@@ -49,10 +49,10 @@ const styles = StyleSheet.create({
     padding: 10
   },
   options: {
-    color: "gray",
+    color: "white",
     alignItems: 'center',
     fontSize: 18,
     padding: '15px',
-    fontWeight: 600
+    fontWeight: '600'
   },
 })
