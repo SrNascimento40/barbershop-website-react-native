@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, useWindowDimensions, Image, Text, View, TouchableOpacity } from 'react-native'
 import menu from '../../../assets/icons/menu.png'
 import logo from '../../../assets/images/generic-logo.png'
@@ -10,12 +10,11 @@ const paddingResponsive = (width: number) => {
     else if (width < 680) return '30%'
     else if (width > 680) return '40%'
 }
+
 function RenderMenu(width: number) {
     const GoSchedule = () => {
         console.log('it works (:');
     }
-
-    console.log(width);
     if (width < 415) {
         return (<TouchableOpacity onPress={() => GoSchedule()}><Image style={styles.logoMenu} source={menu} /></TouchableOpacity>)
     }
