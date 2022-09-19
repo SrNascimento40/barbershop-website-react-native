@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: "#ffbc00",
+    backgroundColor: "#FFD664",
   },
   logo: {
     height: 125,

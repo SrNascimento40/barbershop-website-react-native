@@ -9,7 +9,7 @@ import NavbarMobile from '../../components/NavbarMobile'
 import Scheduler from '../../components/ScheduleContainer'
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
     <>
       <NavbarMobile

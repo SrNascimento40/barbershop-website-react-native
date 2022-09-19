@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, useWindowDimensions } from 'react-native'
 import instaPhoto3 from '../../../assets/images/instaPhoto.jpg'
 import instaPhoto1 from '../../../assets/images/instaPhoto2.jpg'
 import instaPhoto2 from '../../../assets/images/instaPhoto1.jpg'
@@ -8,6 +8,7 @@ import instaPhoto from '../../../assets/images/instaPhoto3.jpg'
 
 
 export default function instaContainer() {
+  const { width } = useWindowDimensions()
   return (
     <View style={styles.instaContainer}>
       <div id='instagram' />
@@ -15,18 +16,18 @@ export default function instaContainer() {
       <View style={styles.photos}>
         <View style={styles.photos}>
           <a href='https://www.instagram.com/p/ChkIqG6O0GQ/' target="_blank">
-            <Image source={instaPhoto1} style={styles.instaPhoto} />
+            <Image source={instaPhoto1} style={{...styles.instaPhoto, height:(width/2)-30, width:(width/2)-30}} />
           </a>
           <a href='https://www.instagram.com/p/ChK2E4XpUU4/' target="_blank">
-            <Image source={instaPhoto2} style={styles.instaPhoto} />
+            <Image source={instaPhoto2} style={{...styles.instaPhoto, height:(width/2)-30, width:(width/2)-30}} />
           </a>
         </View>
         <View style={styles.photos}>
           <a href='https://www.instagram.com/p/ChXlYK6O5X0/' target="_blank">
-            <Image source={instaPhoto3} style={styles.instaPhoto} />
+            <Image source={instaPhoto3} style={{...styles.instaPhoto, height:(width/2)-30, width:(width/2)-30}} />
           </a>
           <a href='https://www.instagram.com/p/Cd55Fm1L-z7/' target="_blank">
-            <Image source={instaPhoto} style={styles.instaPhoto} />
+            <Image source={instaPhoto} style={{...styles.instaPhoto, height:(width/2)-30, width:(width/2)-30}} />
           </a>
         </View>
       </View>
@@ -40,7 +41,9 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     paddingBottom: 40,
-    backgroundColor: "#ffbc00"
+    backgroundColor: "#FFD664",
+    borderBottom: 'solid',
+    borderBottomColor: '#ffbc00',
   },
   title: {
     paddingTop: 40,
@@ -50,8 +53,8 @@ const styles = StyleSheet.create({
     color: "#0a0a0a"
   },
   instaPhoto: {
-    width: 280,
-    height: 280,
+    maxWidth: 280,
+    maxHeight: 280,
     margin: 5,
   },
   photos: {

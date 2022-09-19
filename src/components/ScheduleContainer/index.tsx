@@ -33,7 +33,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 40,
-    backgroundColor: "#272727"
+    backgroundColor: "#272727",
+    borderBottom: 'solid',
+    borderBottomColor: '#ffbc00',
   },
   title: {
     paddingTop: 60,

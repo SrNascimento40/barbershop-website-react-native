@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: absolute;
-  backdrop-filter: blur(3px);
+  position: fixed;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
   width: 100%;
   height: 100vh;
   top: 0;
@@ -13,9 +14,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  background: rgba(17, 18, 17, 0.95);
-  background: linear-gradient(35deg, rgba(39, 39, 39, 0.6) 0%, rgba(168, 124, 0, 0.5494572829131652) 50%, rgba(39, 39, 39, 0.5) 100%);
-
+  background: rgb(255,188,0);
+  background: linear-gradient(0deg, rgba(255,188,0,0.8) 0%, rgba(39,39,39,0.82) 20%, rgba(39,39,39,0.7) 80%, rgba(255,188,0,0.7) 100%);  
+  
   nav {
     display: flex;
     width: 100%;
@@ -23,7 +24,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     transform: scale(0.7);
     transition: .7s;
   }

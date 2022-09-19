@@ -14,13 +14,13 @@ export default function NavbarMobile({ menuOpen, setMenuOpen }: { menuOpen: bool
         </TouchableOpacity>
         <nav style={styles.list}>
           <a href="#about">
-            <li style={styles.options}>Sobre</li>
+            <li onClick={() => setMenuOpen(false)} style={styles.options}>Sobre</li>
           </a>
           <a href="#instagram">
-            <li style={styles.options}>Instagram</li>
+            <li onClick={() => setMenuOpen(false)} style={styles.options}>Instagram</li>
           </a>
           <a href='https://www.trinks.com/ferreirabarbearia' target="_blank">
-            <li style={styles.options}>Agendar</li>
+            <li onClick={() => setMenuOpen(false)} style={styles.options}>Agendar</li>
           </a>
         </nav>
       </Container>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   options: {
     color: "white",
     alignItems: 'center',
-    fontSize: 18,
+    fontSize: 56,
     padding: '15px',
     fontWeight: '600'
   },
