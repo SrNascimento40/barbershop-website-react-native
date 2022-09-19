@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { StyleSheet, useWindowDimensions, Image, Text, View, TouchableOpacity } from 'react-native'
 import menu from '../../../assets/icons/menu.png'
 import logo from '../../../assets/images/generic-logo.png'
+import { Options } from './style'
 
 
 const paddingResponsive = (width: number) => {
@@ -21,16 +22,16 @@ function RenderMenu(width: number, { menuOpen, setMenuOpen }: { menuOpen: boolea
     else {
         return (<ul style={{ ...styles.list, paddingLeft: paddingResponsive(width) }}>
             <a href="#about">
-                <li style={styles.options}>Sobre</li>
+                <Options>Sobre</Options>
             </a>
             <a href="#instagram">
-                <li style={styles.options}>Instagram</li>
+                <Options>Instagram</Options>
             </a>
             <a href='https://www.trinks.com/ferreirabarbearia' target="_blank">
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => GoSchedule()}>
-                    <li style={styles.options}>Agendar</li>
+                    <Options>Agendar</Options>
                 </TouchableOpacity>
             </a>
         </ul>)
@@ -88,13 +89,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
     },
-    options: {
-        paddingRight: 22,
-        color: "#272727",
-        alignItems: 'center',
-        fontFamily: 'Roboto Condensed',
-        fontSize: 18
-    },
     logoMenu: {
         width: 20,
         height: 20,
@@ -103,9 +97,9 @@ const styles = StyleSheet.create({
     },
     button: {
         alignItems: 'center',
-        backgroundColor: '#FFD664',
+        justifyContent: 'center',
+        backgroundColor: '#ffbc00',
         paddingVertical: 10,
         borderRadius: 7,
     }
 })
-// #e8e8e8

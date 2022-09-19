@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, Image, View, TouchableOpacity, } from 'react-native'
 import closeIcon from '../../../assets/icons/icon-close.png'
-import { Container } from './style';
+import { Container, OptionsMobile } from './style';
 import './style.ts';
 
 
@@ -14,13 +14,13 @@ export default function NavbarMobile({ menuOpen, setMenuOpen }: { menuOpen: bool
         </TouchableOpacity>
         <nav style={styles.list}>
           <a href="#about">
-            <li onClick={() => setMenuOpen(false)} style={styles.options}>Sobre</li>
+            <OptionsMobile onClick={() => setMenuOpen(false)}>Sobre</OptionsMobile>
           </a>
           <a href="#instagram">
-            <li onClick={() => setMenuOpen(false)} style={styles.options}>Instagram</li>
+            <OptionsMobile onClick={() => setMenuOpen(false)}>Instagram</OptionsMobile>
           </a>
           <a href='https://www.trinks.com/ferreirabarbearia' target="_blank">
-            <li onClick={() => setMenuOpen(false)} style={styles.options}>Agendar</li>
+            <OptionsMobile onClick={() => setMenuOpen(false)}>Agendar</OptionsMobile>
           </a>
         </nav>
       </Container>
@@ -47,12 +47,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10
-  },
-  options: {
-    color: "white",
-    alignItems: 'center',
-    fontSize: 56,
-    padding: '15px',
-    fontWeight: '600'
   },
 })

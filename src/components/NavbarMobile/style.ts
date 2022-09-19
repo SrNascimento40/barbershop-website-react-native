@@ -29,3 +29,17 @@ export const Container = styled.div`
     transition: .7s;
   }
 `
+
+export const OptionsMobile = styled.li`
+    color: #fff;
+    align-items: center;
+    padding: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 48px;
+    font-weight: '600';
+
+    &:hover {
+        color: rgb(255, 188, 0);
+        font-size: 62px;
+    }
+`

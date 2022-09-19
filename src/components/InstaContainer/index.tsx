@@ -42,8 +42,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingBottom: 40,
     backgroundColor: "#FFD664",
-    borderBottom: 'solid',
-    borderBottomColor: '#ffbc00',
+    borderStyle: 'solid',
+    borderBottomColor: '#000',
+    borderBottomWidth:2
   },
   title: {
     paddingTop: 40,
