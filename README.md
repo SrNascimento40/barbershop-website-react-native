@@ -1,4 +1,4 @@
-# barbershop-website-react-native
+# Barbershop website with react-native
 
 Developed using typescript, react native, and expo for a barbershop responsive website.
 
