@@ -1,6 +1,6 @@
 # barbershop-website-react-native
 
-Developed using typescript, react native, and expo for a barbershop website.
+Developed using typescript, react native, and expo for a barbershop responsive website.
 
 # Website
 https://barbershop-website-react-native-srnascimento40.vercel.app/
