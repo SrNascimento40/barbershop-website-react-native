@@ -4,6 +4,7 @@ import instaPhoto3 from '../../../assets/images/instaPhoto.jpg'
 import instaPhoto1 from '../../../assets/images/instaPhoto2.jpg'
 import instaPhoto2 from '../../../assets/images/instaPhoto1.jpg'
 import instaPhoto from '../../../assets/images/instaPhoto3.jpg'
+import { Title } from './style'
 
 
 
@@ -12,7 +13,7 @@ export default function instaContainer() {
   return (
     <View style={styles.instaContainer}>
       <div id='instagram' />
-      <Text style={styles.title}>Instagram</Text>
+      <Title>Instagram</Title>
       <View style={styles.photos}>
         <View style={styles.photos}>
           <a href='https://www.instagram.com/p/ChkIqG6O0GQ/' target="_blank">
@@ -45,13 +46,6 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderBottomColor: '#000',
     borderBottomWidth:2
-  },
-  title: {
-    paddingTop: 40,
-    padding: 20,
-    fontWeight: "600",
-    fontSize: 36,
-    color: "#0a0a0a"
   },
   instaPhoto: {
     maxWidth: 280,
