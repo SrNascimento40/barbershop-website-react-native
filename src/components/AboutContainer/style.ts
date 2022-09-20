@@ -16,8 +16,11 @@ export const AboutView = styled.div`
     flex-wrap: nowrap;
     justify-content: space-around;
     box-sizing: border-box;
+    align-items: center;
+    gap: 60px;
 `
 
 export const ViewContainer = styled.div`
     box-sizing: border-box;
+    padding: 5%;
 `
