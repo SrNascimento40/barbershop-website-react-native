@@ -11,3 +11,6 @@ export const SocialIcons = styled.img`
         width: 30px;
     }
 `
+export const ViewGap = styled.div`
+    gap:15px;
+`

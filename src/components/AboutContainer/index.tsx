@@ -31,7 +31,7 @@ export default function AboutContainer() {
   return (
     <ViewContainer style={{...styles.AboutContainer, justifyContent:titlePlaceResponsive(width)}}>
       <div id='about' />
-      <Title style={styles.title}>Sobre</Title>
+      <Title>Sobre</Title>
       <AboutView style={{ flexDirection:directionResponsive(width) }}>
         <Text style={{...styles.text, textAlign: alignResponsive(width) }}>
         Aqui é barba, cabelo e bigode! Venha dar aquele tapa no visual e tomar aquela cervejinha gelada conversando com os amigos. Estamos abertos o dia todo prontos para te dar o melhor atendimento.

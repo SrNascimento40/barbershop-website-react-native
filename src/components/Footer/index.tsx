@@ -5,44 +5,43 @@ import instaIcon from '../../../assets/icons/insta-icon-black.png'
 import youtubeIcon from '../../../assets/icons/youtube-icon.png'
 import facebookIcon from '../../../assets/icons/facebook-icon.png'
 import whatsIcon from '../../../assets/icons/whats-icon.png'
-import { SocialIcons } from './style'
+import { SocialIcons, ViewGap } from './style'
 
 const footerResponsive = (width: number) => {
-  if (width < 485) return 'column'
-  else if (width > 485) return 'row'
+  if (width < 690) {return 'column'}
+  else {return 'row'}
 }
 
 export default function Footer() {
   const { width } = useWindowDimensions()
 
   return (
-    <View style={styles.footer}>
+    <ViewGap style={{...styles.footer, flexDirection: footerResponsive(width)}}>
       <Image source={genericLogo} style={styles.logo} />
-      <View style={styles.infoCol}>
+      <View>
         <Text style={styles.text} >Segunda a Sexta - 09h às 20h Sábados - 08h às 18h</Text>
+      </View>
+      <View style={{ alignItems: 'center', backgroundColor: "#ffbc00"}}>
         <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-evenly', margin: 5 }}>
           <a href='https://www.instagram.com/ferreiraclubbarbearia/' target="_blank"><SocialIcons src={instaIcon} /></a>
           <a href='https://www.youtube.com/channel/UCPg8ChUlF5it2IAFTO3YAbA' target="_blank"><SocialIcons src={youtubeIcon} /></a>
           <a href='https://www.facebook.com/ferreirabarbeariadf/' target="_blank"><SocialIcons src={facebookIcon} /></a>
           <a href="https://bre.is/MKP5sJsd" target="_blank"><SocialIcons src={whatsIcon} /></a>
         </View>
-        <Text style={styles.text} >Rua Professor Moraes, 476</Text>
-        <Text style={styles.text} >Tel: 61 8278-9592</Text>
+        <Text style={styles.text} >Rua Professor Moraes, 476<br />Tel: 61 8278-9592</Text>
       </View>
-    </View>
+    </ViewGap>
   )
 }
 
 const styles = StyleSheet.create({
   footer: {
     display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    height: '35vh',
     width: '100%',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    backgroundColor: "#FFD664",
+    padding: 20,
+    justifyContent: 'space-between',
+    alignItems:'center',
+    backgroundColor: "#ffbc00",
   },
   logo: {
     height: 125,
@@ -50,10 +49,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#060606",
-    textAlign: "center"
-  },
-  infoCol: {
-    display: 'flex',
-    flexDirection: 'column'
+    textAlign: "center",
+    fontWeight: '700',
   }
 })
