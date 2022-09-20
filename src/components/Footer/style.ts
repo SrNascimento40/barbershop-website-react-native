@@ -7,7 +7,7 @@ export const SocialIcons = styled.img`
     margin-right: 10px;
 
     &:hover {
-        height: 26px;
-        width: 26px;
+        height: 30px;
+        width: 30px;
     }
 `

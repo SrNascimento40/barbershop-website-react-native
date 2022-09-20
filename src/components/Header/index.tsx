@@ -41,8 +41,6 @@ function RenderMenu(width: number, { menuOpen, setMenuOpen }: { menuOpen: boolea
 
 export default function Header({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOpen: any }) {
     const { width } = useWindowDimensions()
-    console.log(width);
-
     return (
         <View style={styles.header}>
             <View style={styles.menu}>

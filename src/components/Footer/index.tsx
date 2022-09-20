@@ -16,11 +16,11 @@ export default function Footer() {
   const { width } = useWindowDimensions()
 
   return (
-    <View style={{...styles.footer, flexDirection: footerResponsive(width)}}>
+    <View style={styles.footer}>
       <Image source={genericLogo} style={styles.logo} />
-      <Text style={styles.text} >Segunda a Sexta - 09h às 20h Sábados - 08h às 18h</Text>
       <View style={styles.infoCol}>
-        <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', margin: 5}}>
+        <Text style={styles.text} >Segunda a Sexta - 09h às 20h Sábados - 08h às 18h</Text>
+        <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-evenly', margin: 5 }}>
           <a href='https://www.instagram.com/ferreiraclubbarbearia/' target="_blank"><SocialIcons src={instaIcon} /></a>
           <a href='https://www.youtube.com/channel/UCPg8ChUlF5it2IAFTO3YAbA' target="_blank"><SocialIcons src={youtubeIcon} /></a>
           <a href='https://www.facebook.com/ferreirabarbeariadf/' target="_blank"><SocialIcons src={facebookIcon} /></a>
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
   footer: {
     display: 'flex',
     flexDirection: 'row',
+    flexWrap: 'wrap',
     height: '35vh',
     width: '100%',
     justifyContent: 'space-around',
