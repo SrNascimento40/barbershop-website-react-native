@@ -16,7 +16,7 @@ function RenderMenu(width: number, { menuOpen, setMenuOpen }: { menuOpen: boolea
     const GoSchedule = () => {
         console.log('it works (:');
     }
-    if (width < 415) {
+    if (width < 590) {
         return (<TouchableOpacity onPress={() => setMenuOpen(true)}><Image style={styles.logoMenu} source={menu} /></TouchableOpacity>)
     }
     else {

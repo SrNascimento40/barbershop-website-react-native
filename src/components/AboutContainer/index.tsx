@@ -55,13 +55,6 @@ const styles = StyleSheet.create({
     borderBottomColor: '#000',
     borderBottomWidth: 2
   },
-  title: {
-    paddingTop: 40,
-    padding: 20,
-    fontWeight: "600",
-    fontSize: 76,
-    color: "#0a0a0a"
-  },
   text: {
     width: '85%',
     padding: 20,

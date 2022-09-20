@@ -4,8 +4,7 @@ import instaPhoto3 from '../../../assets/images/instaPhoto.jpg'
 import instaPhoto1 from '../../../assets/images/instaPhoto2.jpg'
 import instaPhoto2 from '../../../assets/images/instaPhoto1.jpg'
 import instaPhoto from '../../../assets/images/instaPhoto3.jpg'
-import { Title } from './style'
-
+import { ColorHover, Photo, PhotosLine, Title } from './style'
 
 
 export default function instaContainer() {
@@ -14,24 +13,24 @@ export default function instaContainer() {
     <View style={styles.instaContainer}>
       <div id='instagram' />
       <Title>Instagram</Title>
-      <View style={styles.photos}>
-        <View style={styles.photos}>
+      <PhotosLine>
+        <PhotosLine>
           <a href='https://www.instagram.com/p/ChkIqG6O0GQ/' target="_blank">
-            <Image source={instaPhoto1} style={{...styles.instaPhoto, height:(width/2)-30, width:(width/2)-30}} />
+            <ColorHover><Photo src={instaPhoto1} style={{ height:(width/2)-30, width:(width/2)-30 }} /></ColorHover>
           </a>
           <a href='https://www.instagram.com/p/ChK2E4XpUU4/' target="_blank">
-            <Image source={instaPhoto2} style={{...styles.instaPhoto, height:(width/2)-30, width:(width/2)-30}} />
+            <ColorHover><Photo src={instaPhoto2} style={{ height:(width/2)-30, width:(width/2)-30 }} /></ColorHover>
           </a>
-        </View>
-        <View style={styles.photos}>
+        </PhotosLine>
+        <PhotosLine>
           <a href='https://www.instagram.com/p/ChXlYK6O5X0/' target="_blank">
-            <Image source={instaPhoto3} style={{...styles.instaPhoto, height:(width/2)-30, width:(width/2)-30}} />
+            <ColorHover><Photo src={instaPhoto3} style={{ height:(width/2)-30, width:(width/2)-30 }} /></ColorHover>
           </a>
           <a href='https://www.instagram.com/p/Cd55Fm1L-z7/' target="_blank">
-            <Image source={instaPhoto} style={{...styles.instaPhoto, height:(width/2)-30, width:(width/2)-30}} />
+            <ColorHover><Photo src={instaPhoto} style={{ height:(width/2)-30, width:(width/2)-30 }} /></ColorHover>
           </a>
-        </View>
-      </View>
+        </PhotosLine>
+      </PhotosLine>
     </View>
   )
 }
@@ -42,20 +41,9 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     paddingBottom: 40,
-    backgroundColor: "#FFD664",
+    backgroundColor: "#0a0a0a",
     borderStyle: 'solid',
-    borderBottomColor: '#000',
-    borderBottomWidth:2
-  },
-  instaPhoto: {
-    maxWidth: 280,
-    maxHeight: 280,
-    margin: 5,
-  },
-  photos: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around'
+    borderColor: '#ffbc00',
+    borderWidth:2
   }
 })
