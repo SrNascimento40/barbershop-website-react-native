@@ -42,6 +42,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems:'center',
     backgroundColor: "#ffbc00",
+    borderStyle: 'solid',
+    borderColor: '#000',
+    borderWidth:2
   },
   logo: {
     height: 125,

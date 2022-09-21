@@ -20,6 +20,8 @@ const styles = StyleSheet.create({
     maxHeight: "90vh",
     maxWidth: "100%",
     resizeMode: 'contain',
+    padding: 10,
+    paddingBottom: 5
   },
   Container: {
     flex: 1,
@@ -27,7 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderStyle: 'solid',
-    borderBottomColor: '#000',
-    borderBottomWidth:2
+    borderColor: '#000',
+    borderWidth:2
   }
 })
