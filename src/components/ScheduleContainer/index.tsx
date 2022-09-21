@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native'
 import background from '../../../assets/images/backgroundSchedule.jpg'
-import { A, TextHover } from './style';
+import { A, TextHover, Title } from './style';
 
 
 export default function Scheduler() {
@@ -15,7 +15,7 @@ export default function Scheduler() {
       source={background}
       blurRadius={5}
       style={styles.SchedulerContainer}>
-      <Text style={styles.title}>Agende um horário!</Text>
+      <Title>Agende um horário!</Title>
       <A href='https://www.trinks.com/ferreirabarbearia' target="_blank">
         <TouchableOpacity
           style={styles.button}
@@ -33,20 +33,12 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingBottom: 40,
+    paddingBottom: 60,
     backgroundColor: "#272727",
     borderStyle: 'solid',
     borderColor: '#ffbc00',
     borderWidth: 2,
     borderBottomWidth: 0,
-  },
-  title: {
-    paddingTop: 60,
-    paddingBottom: 80,
-    textAlign: 'center',
-    fontWeight: "600",
-    fontSize: 36,
-    color: '#ffbc00'
   },
   button: {
     alignItems: 'center',

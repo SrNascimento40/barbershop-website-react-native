@@ -1,12 +1,29 @@
 import styled from "styled-components";
 
 export const Title = styled.h3`
-    padding-top: 40px;
-    padding-bottom: 60px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
     font-weight: 600;
-    font-size: 76px;
+    font-size: 50px;
     color: #ffbc00;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    @media only screen and (min-width: 768px) {
+        padding-top: 40px;
+        padding-bottom: 60px;
+        font-weight: 600;
+        font-size: 76px;
+    }
+
+    @media only screen and (max-width: 360px) {
+        padding-top: 15px;
+        padding-bottom: 30px;
+        font-weight: 600;
+        font-size: 38px;
+    }
 `
 export const PhotosLine = styled.div`
     display: flex;
