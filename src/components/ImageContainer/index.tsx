@@ -1,32 +1,28 @@
 import React from 'react'
-import { StyleSheet, Image, View } from 'react-native'
+import { StyleSheet, TouchableOpacity } from 'react-native'
 import Backgroundimage from '../../../assets/images/backgroundImage.jpg'
-import genericLogo from '../../../assets/images/generic-logo-horizontal.png'
+import { A, Container, TextHover, Title } from './style'
 
 
 export default function ImageContainer() {
   return (
-    <div style={{...styles.ImageContainer, backgroundImage: `url(${Backgroundimage})`, backgroundRepeat:'no-repeat', backgroundPosition: 'center center fixed', backgroundSize:'cover'}}>
-      <Image style={styles.logo} source={genericLogo}/>
-    </div>
+    <Container style={{backgroundImage: `url(${Backgroundimage})`, backgroundRepeat:'no-repeat', backgroundPosition: 'center center fixed', backgroundSize:'cover'}}>
+      <Title>BARBEARIA DO FERREIRA</Title>
+      <A href='https://www.trinks.com/ferreirabarbearia' target="_blank">
+        <TouchableOpacity
+          style={styles.button}>
+          <TextHover>AGENDAR</TextHover>
+        </TouchableOpacity>
+      </A>
+    </Container>
   )
 }
 const styles = StyleSheet.create({
-  ImageContainer: {
-    display: 'flex',
-    width: '100%',
-    position: 'relative',
-    opacity: 0.95,
-    justifyContent: 'center',
+  button: {
     alignItems: 'center',
-    borderStyle: 'solid',
-    borderBottomColor: '#000',
-    borderBottomWidth:2,
-    height: 450,
-  },
-  logo: {
-    height: 76,
-    width: 225,
-    opacity: 0.9
+    backgroundColor: '#ffbc00',
+    padding: 15,
+    paddingHorizontal: 35,
+    borderRadius: 7,
   }
 })

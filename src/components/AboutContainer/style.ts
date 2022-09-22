@@ -44,7 +44,7 @@ export const TextAbout = styled.p`
     font-size: 20px;
     font-weight: 200;
     color: #0a0a0a;
-    font-family: fantasy;
+    font-family: system-ui;
 
     @media only screen and (min-width: 768px) {
         font-size: 30px;

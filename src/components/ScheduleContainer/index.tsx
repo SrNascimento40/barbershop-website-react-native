@@ -20,7 +20,7 @@ export default function Scheduler() {
         <TouchableOpacity
           style={styles.button}
           onPress={() => funcaoRand()}>
-          <TextHover style={styles.textButton}>AGENDAR</TextHover>
+          <TextHover>AGENDAR</TextHover>
         </TouchableOpacity>
       </A>
     </ImageBackground>
@@ -46,10 +46,5 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingHorizontal: 20,
     borderRadius: 7,
-  },
-  textButton: {
-    Color: '#272727',
-    fontWeight: '700',
-    fontSize:14
   }
 })
