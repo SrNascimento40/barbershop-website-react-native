@@ -8,7 +8,7 @@ export const Title = styled.h3`
     font-weight: 600;
     font-size: 50px;
     color: #ffbc00;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color:  #0a0a0a;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
@@ -46,6 +46,8 @@ export const TextAbout = styled.p`
     font-size: 20px;
     font-weight: 200;
     color: #ffbc00;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:  #ffbc00;
     font-family: system-ui;
 
     @media only screen and (min-width: 768px) {

@@ -28,7 +28,7 @@ export default function Footer() {
           <a href='https://www.facebook.com/ferreirabarbeariadf/' target="_blank"><SocialIcons src={facebookIcon} /></a>
           <a href="https://bre.is/MKP5sJsd" target="_blank"><SocialIcons src={whatsIcon} /></a>
         </View>
-        <Text style={styles.text} >Rua Professor Moraes, 476<br />Tel: 61 8278-9592</Text>
+        <Text style={styles.text}>Residencial Le Paysage, R. 34<br />Tel: 61 8278-9592</Text>
       </View>
     </ViewGap>
   )

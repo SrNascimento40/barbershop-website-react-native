@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, useWindowDimensions, Image } from 'react-native'
 import profileLogo from '../../../assets/images/instaProfile.png'
 import { AboutView, TextAbout, Title, ViewContainer } from './style'
+import Background from '../../../assets/images/background.jpeg'
 
 function directionResponsive(width: number) {
   if (width < 590) {
@@ -29,7 +30,7 @@ export default function AboutContainer() {
   const { width } = useWindowDimensions()
 
   return (
-    <ViewContainer style={{ ...styles.AboutContainer, justifyContent: titlePlaceResponsive(width) }}>
+    <ViewContainer style={{ ...styles.AboutContainer, justifyContent: titlePlaceResponsive(width), backgroundImage: `url(${Background})`, backgroundRepeat:'no-repeat', backgroundPosition: 'center center fixed', backgroundSize:'cover'}}>
       <div id='about' />
       <Title>Sobre</Title>
       <AboutView style={{ flexDirection: directionResponsive(width) }}>
