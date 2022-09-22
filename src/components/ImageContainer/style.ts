@@ -34,10 +34,13 @@ export const Container = styled.div`
     height: 450px;
     padding: 3.5em;
     gap: 10rem;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
 `
 
 export const TextHover = styled.p`
-    color: #272727;
+    color: #010101;
     font-weight: 700;
     font-size: 14px;
 `

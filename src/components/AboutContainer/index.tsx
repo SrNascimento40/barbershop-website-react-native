@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, useWindowDimensions, Text, Image } from 'react-native'
+import { StyleSheet, useWindowDimensions, Image } from 'react-native'
 import profileLogo from '../../../assets/images/instaProfile.png'
 import { AboutView, TextAbout, Title, ViewContainer } from './style'
 
@@ -36,7 +36,7 @@ export default function AboutContainer() {
         <TextAbout style={{ textAlign: alignResponsive(width) }}>
           Aqui é barba, cabelo e bigode! Venha dar aquele tapa no visual e tomar aquela cervejinha gelada conversando com os amigos. Estamos abertos o dia todo prontos para te dar o melhor atendimento.
         </TextAbout>
-        <Image source={profileLogo} style={{ width: (width / 2.5), height: (width / 2.5), minWidth: 165, minHeight: 165, alignSelf:'center', maxWidth: 420, maxHeight: 420, alignItems: 'center' }} />
+        <Image source={profileLogo} style={{ width: (width / 2.5), height: (width / 2.5), minWidth: 165, minHeight: 165, alignSelf:'center', maxWidth: 420, maxHeight: 420, alignItems: 'center', borderRadius: 100 }} />
       </AboutView>
     </ViewContainer>
   )
@@ -50,9 +50,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',
     paddingBottom: 40,
-    backgroundColor: "#ffbc00",
+    backgroundColor:'#000',
     borderStyle: 'solid',
-    borderBottomColor: '#000',
-    borderBottomWidth: 3
+    borderColor: "#ffbc00",
+    borderWidth: 2,
   }
 })
